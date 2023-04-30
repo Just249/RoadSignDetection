@@ -2,10 +2,9 @@
 title: "Road Sign Project Report"
 author: "Pak Lam Chan, ZI-YING(Sophie) CHEN, Chun Ming Tong"
 date: "2023-04-25"
-output: pdf_document
-editor_options: 
-  markdown: 
-    wrap: 72
+output: 
+  pdf_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -255,10 +254,14 @@ accidents.
 
 Tensorflow Object Detection:
 <https://www.youtube.com/watch?t=10066&v=yqkISICHH-U&feature=youtu.be&ab_channel=NicholasRenotte>
-The following libraries are adopted in this project tensorflow : the
-major tool used to perform training and inference of deep neural
+
+The following libraries are adopted in this project:
+
+tensorflow : the major tool used to perform training and inference of deep neural
 networks. Functionalities also include data automatiom, model tracking,
 performance monitoring and model training tracking and automation, etc.
+
 google.protobuf : serialize structured data, enable data communication
+
 over networks cv2 : read and write images, alter and translate image
 properties, filtering amd features detection, etc
