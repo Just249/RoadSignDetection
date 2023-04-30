@@ -253,6 +253,7 @@ accidents.
 <https://techzizou.com/training-an-ssd-model-for-a-custom-object-using-tensorflow-2-x/>
 
 Tensorflow Object Detection:
+
 <https://www.youtube.com/watch?t=10066&v=yqkISICHH-U&feature=youtu.be&ab_channel=NicholasRenotte>
 
 The following libraries are adopted in this project:
