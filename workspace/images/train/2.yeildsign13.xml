@@ -1,0 +1,26 @@
+<annotation>
+	<folder>2</folder>
+	<filename>2.yeildsign13.jpg</filename>
+	<path>D:\models\OpenCV\Project\SignTranslator\RealTimeObjectDetection\Tensorflow\workspace\images\collectedimages\2\2.yeildsign13.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>838</width>
+		<height>473</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Yeild</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>52</xmin>
+			<ymin>16</ymin>
+			<xmax>449</xmax>
+			<ymax>398</ymax>
+		</bndbox>
+	</object>
+</annotation>

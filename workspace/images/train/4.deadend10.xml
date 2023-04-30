@@ -1,0 +1,26 @@
+<annotation>
+	<folder>4</folder>
+	<filename>4.deadend10.jpg</filename>
+	<path>D:\models\OpenCV\Project\SignTranslator\RealTimeObjectDetection\Tensorflow\workspace\images\collectedimages\4\4.deadend10.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>645</width>
+		<height>512</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Deadend</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>204</xmin>
+			<ymin>106</ymin>
+			<xmax>443</xmax>
+			<ymax>357</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>5</folder>
+	<filename>5.park11.jpg</filename>
+	<path>D:\models\OpenCV\Project\SignTranslator\RealTimeObjectDetection\Tensorflow\workspace\images\collectedimages\5\5.park11.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>498</width>
+		<height>744</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Parking</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>83</xmin>
+			<ymin>104</ymin>
+			<xmax>304</xmax>
+			<ymax>325</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>3</folder>
+	<filename>3.danger1.jpg</filename>
+	<path>D:\models\OpenCV\Project\SignTranslator\RealTimeObjectDetection\Tensorflow\workspace\images\collectedimages\3\3.danger1.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>768</width>
+		<height>428</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Danger</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>39</xmin>
+			<ymin>95</ymin>
+			<xmax>436</xmax>
+			<ymax>428</ymax>
+		</bndbox>
+	</object>
+</annotation>
