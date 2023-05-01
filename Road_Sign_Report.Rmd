@@ -179,7 +179,15 @@ knitr::include_graphics("img/ssd.png")
 
 We applied Single Shot Detectort model as it is faster and more efficient than traditional models because it only requires a single pass through the image. The model takes an input image with a ground truth bounding box around the target object, and uses anchor boxes in multiple layers to capture the object, illustrates by Figure 4. The model then predicts the category and bounding box offset by comparing the anchor box and true bounding box.
 
-We trained the SSD model using the momentum optimizer with a batch size of 4, a learning rate of 0.079999, and a total of 10,000 training steps. We also employed a warm-up stage, where
+We first developed a base model with batch size 3 and no warm up phase, the result in Figure 5 shows that the average precision and average recall are both 0.427 only, with 5 image categories, low average precision means the model makes many flase positive predictions and low recall means the model makes many false negative predicitons.
+
+```{r, echo=FALSE, out.width = "400px", fig.cap="Base Model Training"}
+knitr::include_graphics("img/base.png")
+```
+
+After seeing the low values, we decided to increase the batch size which can make the model more rebust because it updates the weights on a more representative samples and incoporated it with a warm-up phase. 
+
+The final SSD model using the momentum optimizer with a batch size of 4, a learning rate of 0.079999, and a total of 10,000 training steps. We also employed a warm-up stage, where
 the learning rate was gradually increased from 0 to 0.26666 over the
 first 1000 training steps to avoid overshooting and local minimum issues.
 
@@ -203,38 +211,38 @@ precision (mAP) metric on a test set of 10 images.
 
 The evaluation metrics for the model performance were based on the five
 categories of road signs in our dataset, which are Stop, Yield, Danger,
-Deadend, and Parking. We evaluated the model on both the training and
-testing sets.
+Deadend, and Parking. And the average precision and average recall for our base model are both 0.427. In this section, we will only go through the results of our final model and Figure 6 illustrates the model trained after 10000 steps.
 
+```{r, echo=FALSE, out.width = "400px", fig.cap="Model Training"}
+knitr::include_graphics("img/train.png")
+```
+
+Figure 7 shows the evaluation results on the training set with threshold 0.5 \~ 0.95:
+
+Average Precision (mAP): 0.89 
+
+Average Recall: 0.900
 
 ```{r, echo=FALSE, out.width = "400px", fig.cap="Model Performance on Training Dataset"}
 knitr::include_graphics("img/train.png")
 ```
 
-Figure 5 shows the evaluation results on the training set with threshold 0.5 \~ 0.95:
+Figure 8 shows the evaluation results on the training set with threshold 0.5 \~ 0.95:
 
 Average Precision (mAP): 0.89 
 
 Average Recall: 0.900
-
 
 ```{r, echo=FALSE, out.width = "400px", fig.cap="Model Performance on Testing Dataset"}
 knitr::include_graphics("img/test.png")
 ```
-
-Figure 6 shows the evaluation results on the training set with threshold 0.5 \~ 0.95:
-
-Average Precision (mAP): 0.89 
-
-Average Recall: 0.900
-
 
 ```{r, echo=FALSE, out.width = "400px", fig.cap="Detection Result of Testing Dataset"}
 knitr::include_graphics("img/result.png")
 ```
 
 It is worth noting that the model misclassified one of the testing
-images, predicting a "Parking" sign instead of a "Turn" sign.(Figure 7) This
+images, predicting a "Parking" sign instead of a "Turn" sign.(Figure 9) This
 indicates that the model can be further improved by collecting more
 images of the "Parking" and "Turn" signs, and potentially adding more
 training data for those categories.
@@ -253,6 +261,7 @@ accidents.
 <https://techzizou.com/training-an-ssd-model-for-a-custom-object-using-tensorflow-2-x/>
 
 Tensorflow Object Detection:
+
 
 <https://www.youtube.com/watch?t=10066&v=yqkISICHH-U&feature=youtu.be&ab_channel=NicholasRenotte>
 
